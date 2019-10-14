@@ -1,0 +1,71 @@
+<html>
+<head>
+<style>
+
+    
+    td.water{
+        background-color: grey;
+    }
+    .boat{
+        background-color: grey;
+    }
+
+
+</style>
+
+<script> 
+
+var geklikt = [0,0,0,0]; 
+
+
+
+    var count = 0; 
+function schieten(bootofwater, vakje ){
+
+    if(bootofwater == 'water'){
+    vakje.style.backgroundColor = 'blue';
+    var raak = document.getElementById("commentaar").innerHTML = "Plons";  
+    }else{
+        vakje.style.backgroundColor = 'red'; 
+        var mis = document.getElementById("commentaar").innerHTML = "Raak";
+        if(count ==0){
+            count++; 
+        }else{
+            alert("Hij is gezonken"); 
+        }
+        }
+    } 
+    var a0 = document.getElementById("a0"); 
+    var geklikt = [0,0,0,0]; 
+    function geklikt(klik, vakje)
+    if(a0){
+        if(geklikt[0] ==1){
+            alert("al geklikt");
+        }else{
+            geklikt[0] = 1; 
+    }
+    }
+
+
+
+
+
+
+</script> 
+
+</head>
+
+<body> 
+<table border = 1> 
+    <tr>
+        <td class = water onclick="schieten('water',this)" onclick="geklikt(klik,vakje)" id = "a0" >test</td>
+        <td class = boat onclick="schieten('boat',this)" onclick="geklikt(klik,vakje)" id = "a1">test</td>
+        <td class = boat onclick="schieten('boat',this)" onclick="geklikt(klik,vakje)" id = "a2">test</td>
+        <td class = water onclick="schieten('water',this)" onclick="geklikt(klik,vakje)" id = "a3">test</td>
+    </tr> 
+    </table>
+    <div id = commentaar> </div>
+
+</body>
+
+</html>
